@@ -1,0 +1,16 @@
+From: "A. Maitland Bottoms" <bottoms@debian.org>
+Subject: debian source not git
+
+Do not look for git while building Debian package.
+
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -27,7 +27,7 @@
+ 	set(SKIP_INSTALL_ALL ${OSX_PACKAGE})
+ endif()
+ 
+-include(FindGit OPTIONAL)
++#include(FindGit OPTIONAL)
+ if (GIT_FOUND)
+ 	execute_process(
+ 		COMMAND ${GIT_EXECUTABLE} rev-parse --show-toplevel

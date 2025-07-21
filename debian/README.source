@@ -1,0 +1,2 @@
+git clone https://github.com/analogdevicesinc/libad9361-iio.git
+git archive --format=tar --prefix=libad9361-0.1/ 19157df | xz > ../../libad9361_0.1.orig.tar.xz
